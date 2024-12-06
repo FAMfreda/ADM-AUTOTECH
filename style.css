@@ -1,194 +1,168 @@
 /* General Styles */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  :root {
-    --primary-color: #244030;
-    --secondary-color: #88b04b; /* Light green */
-    --accent-color:#E0A423;
-    --bg-color: #f4f4f4;
-
-
-  
-  body {
-    font-family: 'Lato', sans-serif;
-    line-height: 1.6;
-    background-color: var(--bg-color);
-    /* color: #333; */
-  }
-  
-  .container {
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
-
-  }
-  
-  
-  h1, h2, h3 {
-    font-family: 'Montserrat', sans-serif;
-  
-  }
-  
-  /* Header Section */
-  .header {
-    background: linear-gradient(rgba(0, 0, 0, 0.075), rgba(0, 0, 0, 0.397)),
-    url("./images/green-farm-with-organic-produce-sustainable-farming-practices-renewable-energy-solutions-cleaner-environment_888396-56126.jpg") no-repeat center center/cover;
-    color:#ffffff;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-  }
-  
-  
-  .navbar {
-    background-color: var(--primary-color);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 25px;
-    border-radius: 15px 15px;
-    margin-top: 30px;
-  }
-  
-  .logo {
-    color: white;
-    font-size: 1.3rem;
-    font-weight: bold;
-  }
-  
-  .nav-links {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-  }
-  
-  .nav-links a {
-    color:white;
-    text-decoration: none;
-    font-weight: bold;
-  }
-  
-  .btn {
-    display: inline-block;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 12px ;
-    text-align: center;
-    cursor: pointer;
-    text-decoration: none;
-    font-weight: bold;
-
-  }
-  .hamburger {
-    display: none;
-    flex-direction: column;
-    gap: 0.4rem;
-    cursor: pointer;
-  }
-  
-  .hamburger span {
-    display: block;
-    width: 25px;
-    height: 3px;
-    background: #ffffff;
-    border-radius: 5px;
-    /* margin-bottom: 8px; */
-  }
-
-/* Responsive Styles */
-@media (max-width: 768px) {
-  .hamburger {
-    display: flex;
-  }
-
-  .nav-links {
-    display: none;
-    flex-direction: column;
-    gap: 1rem;
-    position: absolute;
-    top: 60px;
-    right: 20px;
-    background: rgba(0, 0, 0, 0.8);
-    padding: 1rem;
-    border-radius: 8px;
-  }
-
-  .nav-links.active {
-    display: flex;
-  }
-  .btn {
-    display: none;
-  }
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
+:root {
+  --primary-color: #244030;
+  --secondary-color: #88b04b; /* Light green */
+  --accent-color: #E0A423;
+  --bg-color: #f4f4f4;
+}
 
+body {
+  font-family: 'Lato', sans-serif;
+  line-height: 1.6;
+  background-color: var(--bg-color);
+  /* color: #333; */
+}
 
-  .hero-buttons {
-    display: flex;
-    gap: 40px;
-    justify-content: center;
-  }
-  .primary-btn {
-    background: var(--accent-color);
-    color: white;
-    padding: 17px 35px;
-  }
-  .primary-btn:hover{
-    background: white;
-    color: var(--primary-color);
-  }
-  .secondary-btn {
-    background: none;
-    color: var(--accent-color);
-    border: 3px solid var(--accent-color);
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
 
-  }
-  .secondary-btn:hover{
-    background: var(--accent-color);
-    color: white;
-    
-  }
-  .hero{
-    margin-top: 5.2%;
-  }
-  
-  .hero h1 {
-    font-size: 4.5rem;
-    line-height: 1;
-    margin-bottom: 10px;
-  }
-  
-  
- .hero p {
+h1, h2, h3 {
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Header Section */
+.header {
+  background: linear-gradient(rgba(0, 0, 0, 0.075), rgba(0, 0, 0, 0.397)),
+  url("./images/green-farm-with-organic-produce-sustainable-farming-practices-renewable-energy-solutions-cleaner-environment_888396-56126.jpg") no-repeat center center/cover;
+  color: #ffffff;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.navbar {
+  background-color: var(--primary-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 25px;
+  border-radius: 15px 15px;
+  margin-top: 30px;
+}
+
+.logo {
+  color: white;
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 12px;
+  text-align: center;
+  cursor: pointer;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 0.4rem;
+  cursor: pointer;
+}
+
+.hamburger span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background: #ffffff;
+  border-radius: 5px;
+  /* margin-bottom: 8px; */
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+}
+
+.primary-btn {
+  background: var(--accent-color);
+  color: white;
+  padding: 17px 35px;
+}
+
+.primary-btn:hover {
+  background: white;
+  color: var(--primary-color);
+}
+
+.secondary-btn {
+  background: none;
+  color: var(--accent-color);
+  border: 3px solid var(--accent-color);
+}
+
+.secondary-btn:hover {
+  background: var(--accent-color);
+  color: white;
+}
+
+.hero {
+  margin-top: 5rem;
+}
+
+.hero-container{
+  align-items: center;
+}
+
+.hero h1 {
+  font-size: 4.5rem;
+  line-height: 1;
+  margin-bottom: 10px;
+}
+
+.hero p {
   font-size: 1.1rem;
   margin-bottom: 60px;
- }
+}
 
- .about-us{
+/* about section */
+.about-us {
   position: relative;
   background: url(/images/632d706299d271d8226f3294_shape_02.svg) no-repeat;
   background-position: bottom right; /* Position the SVG */
   background-size: contain; /* Scale the SVG properly */
- }
+}
 
- .about-us::after{
+.about-us::after {
   content: '';
   position: absolute;
   bottom: 0px;
   right: 0;
   /* width: 300px; 
   height: 300px;  */
-  background: rgba(255, 255, 255, 0.877); 
-  z-index: 1; 
-  pointer-events: none; 
- }
+  background: rgba(255, 255, 255, 0.877);
+  z-index: 1;
+  pointer-events: none;
+}
 
-
- .about-container {
+.about-container {
   display: flex;
   justify-content: space-between;
   padding-top: 150px;
@@ -196,44 +170,23 @@
   position: relative; /* Enables pseudo-element positioning */
 }
 
-.about-container::after {
-  
+.about-content {
+  padding: 10px 140px 10px 0;
 }
 
-
- 
-
- .about-content{
-  padding: 10px 140px 10px 0;
- }
-
-
- .about-img {
-  max-width: 500px; 
-  height: aut0o; 
-  margin: 0 auto; 
-  border-radius: 20px; 
+.about-img {
+  max-width: 500px;
+  height: auto;
+  margin: 0 auto;
+  border-radius: 20px;
   overflow: hidden;
 }
 
 .about-img img {
-  width: 100%; 
-  height: auto; 
-  display: block; 
+  width: 100%;
+  height: auto;
+  display: block;
 }
- /* img{
-  width: 600px;
-  height: 500px;
-  object-fit: cover;
-  border-radius: 15px;
- } */
-
-
-
-
-
-
-
 
 /* Products Section */
 .products {
@@ -276,7 +229,6 @@
   color: #666;
 }
 
-
 /* Benefits Section */
 .benefits {
   padding: 5rem 0;
@@ -311,7 +263,6 @@
   font-size: 1rem;
 }
 
-
 /* Testimonials Section */
 .testimonials {
   padding: 4rem 0;
@@ -341,34 +292,14 @@
   color: var(--primary-color);
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- /* Contact Section */
- .contact {
+/* Contact Section */
+.contact {
   padding: 50px 0;
   text-align: center;
   margin-bottom: 60px;
 }
-.contact-container{
+
+.contact-container {
   background: var(--primary-color);
   padding: 80px 250px;
   border-radius: 25px;
@@ -378,10 +309,12 @@
   color: white;
   font-size: 42px;
 }
+
 .contact-container p {
   color: white;
   font-size: 18px;
 }
+
 .contact form {
   margin-top: 20px;
   display: flex;
@@ -401,17 +334,110 @@
   margin-top: 10px;
 }
 
-
-
-
-
-
-
- }
 /* footer section */
- .footer {
+.footer {
   background: var(--primary-color);
   color: white;
   text-align: center;
   padding: 20px 0;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    gap: 1rem;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 1rem;
+    border-radius: 8px;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .get-quote {
+    display: none;
+  }
+
+  .hero{
+    margin-top: 35%;
+  }
+  .hero h1 {
+    font-size: 3.4rem;
+    line-height:5rem;
+  }
+
+  .hero p {
+    font-size: 1em;
+    padding:0 80px;
+  }
+
+  .hero-buttons {
+    display: flex;
+    /* flex-direction: column; */
+    align-items: center;
+  }
+
+  .hero-buttons .btn {
+    width: 100%;
+    max-width: 250px;
+    padding: 12px;
+    font-size: 1.1em;
+    margin-top: 30px;
+  }
+}
+ /* Mobile Breakpoint */
+@media (max-width: 320px) {
+.navbar{
+  margin-top:10px;
+}
+  .hero{
+    margin-top:25px;
+    padding-bottom: 0;
+  }
+  .hero h1 {
+    font-size: 18px;
+    line-height: 28px;
+  }
+ .hero p {
+    font-size: 8px;
+    
+  }
+
+  .hero-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:3px;
+  }
+
+  .hero-buttons .btn {
+    width: 100%;
+    max-width: 250px;
+    padding: 10px;
+    font-size: 1em;
+    /* margin-top: 30px; */
+  }
+}
+
+@media (max-width: 450px) {
+  /* .header{
+    height: 100vh;
+  } */
+
+  .hero{
+    margin-top:100px;
+    padding-bottom: 0;
+  }
+
+
 }
