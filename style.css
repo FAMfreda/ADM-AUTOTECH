@@ -8,12 +8,13 @@
 :root {
   --primary-color: #244030;
   --secondary-color: #88b04b; /* Light green */
-  --accent-color: #E0A423;
+  --accent-color: #e0a423;
   --bg-color: #f4f4f4;
+  color: #2f5f44;
 }
 
 body {
-  font-family: 'Lato', sans-serif;
+  font-family: "Lato", sans-serif;
   line-height: 1.6;
   background-color: var(--bg-color);
   /* color: #333; */
@@ -25,14 +26,17 @@ body {
   margin: 0 auto;
 }
 
-h1, h2, h3 {
-  font-family: 'Montserrat', sans-serif;
+h1,
+h2,
+h3 {
+  font-family: "Montserrat", sans-serif;
 }
 
 /* Header Section */
 .header {
   background: linear-gradient(rgba(0, 0, 0, 0.075), rgba(0, 0, 0, 0.397)),
-  url("./images/green-farm-with-organic-produce-sustainable-farming-practices-renewable-energy-solutions-cleaner-environment_888396-56126.jpg") no-repeat center center/cover;
+    url("./images/green-farm-with-organic-produce-sustainable-farming-practices-renewable-energy-solutions-cleaner-environment_888396-56126.jpg")
+      no-repeat center center/cover;
   color: #ffffff;
   height: 100vh;
   display: flex;
@@ -48,6 +52,10 @@ h1, h2, h3 {
   padding: 15px 25px;
   border-radius: 15px 15px;
   margin-top: 30px;
+  position: fixed;
+  width: 89%;
+  z-index: 100;
+  transition: background-color 0.3s ease;
 }
 
 .logo {
@@ -81,8 +89,6 @@ h1, h2, h3 {
 
 .hamburger {
   display: none;
-  flex-direction: column;
-  gap: 0.4rem;
   cursor: pointer;
 }
 
@@ -127,7 +133,7 @@ h1, h2, h3 {
   margin-top: 5rem;
 }
 
-.hero-container{
+.hero-container {
   align-items: center;
 }
 
@@ -151,7 +157,7 @@ h1, h2, h3 {
 }
 
 .about-us::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: 0px;
   right: 0;
@@ -322,7 +328,8 @@ h1, h2, h3 {
   gap: 10px;
 }
 
-.contact input, .contact textarea {
+.contact input,
+.contact textarea {
   width: 100%;
   padding: 17px;
   border: 1px solid #ccc;
@@ -346,6 +353,8 @@ h1, h2, h3 {
 @media (max-width: 768px) {
   .hamburger {
     display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
   }
 
   .nav-links {
@@ -355,30 +364,44 @@ h1, h2, h3 {
     position: absolute;
     top: 60px;
     right: 20px;
-    background: rgba(0, 0, 0, 0.8);
+    width: 90%;
+    background: var(--primary-color);
     padding: 1rem;
     border-radius: 8px;
+    transition: max-height 0.3s ease-in-out; /* Add the transition */
+    max-height: 0; /*Initially hide the menu with 0 height */
+    overflow: hidden; /* Prevent content from overflowing */
   }
 
-  .nav-links.active {
+  .nav-links.open {
     display: flex;
+    max-height: 300px;
   }
+  .nav-links li {
+    margin: 10px 0; /* Add spacing between list items */
+  }
+
+  .nav-links li:hover {  /* Target the anchor link within the list item */
+    background-color:var(--accent-color); /* Or any color you want */
+    padding: 5px; 
+
+ }
 
   .get-quote {
     display: none;
   }
 
-  .hero{
+  .hero {
     margin-top: 35%;
   }
   .hero h1 {
     font-size: 3.4rem;
-    line-height:5rem;
+    line-height: 5rem;
   }
 
   .hero p {
     font-size: 1em;
-    padding:0 80px;
+    padding: 0 80px;
   }
 
   .hero-buttons {
@@ -395,29 +418,28 @@ h1, h2, h3 {
     margin-top: 30px;
   }
 }
- /* Mobile Breakpoint */
+/* Mobile Breakpoint */
 @media (max-width: 320px) {
-.navbar{
-  margin-top:10px;
-}
-  .hero{
-    margin-top:25px;
+  .navbar {
+    margin-top: 10px;
+  }
+  .hero {
+    margin-top: 25px;
     padding-bottom: 0;
   }
   .hero h1 {
     font-size: 18px;
     line-height: 28px;
   }
- .hero p {
+  .hero p {
     font-size: 8px;
-    
   }
 
   .hero-buttons {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap:3px;
+    gap: 3px;
   }
 
   .hero-buttons .btn {
@@ -434,10 +456,8 @@ h1, h2, h3 {
     height: 100vh;
   } */
 
-  .hero{
-    margin-top:100px;
+  .hero {
+    margin-top: 100px;
     padding-bottom: 0;
   }
-
-
 }
