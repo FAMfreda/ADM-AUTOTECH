@@ -31,6 +31,11 @@ h2,
 h3 {
   font-family: "Montserrat", sans-serif;
 }
+a{
+  text-decoration: none;
+}
+
+
 
 /* Header Section */
 .header {
@@ -40,20 +45,23 @@ h3 {
   color: #ffffff;
   height: 100vh;
   display: flex;
+  top: 20px;
   flex-direction: column;
   text-align: center;
 }
-
-.navbar {
+.header-container{
   background-color: var(--primary-color);
+  max-width: 100%;
+}
+.navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 25px;
-  border-radius: 15px 15px;
-  margin-top: 30px;
+  padding: 15px 70px;
+  /* border-radius: 15px 15px; */
+  /* margin-top: 30px; */
   position: fixed;
-  width: 89%;
+  width: 100%;
   z-index: 100;
   transition: background-color 0.3s ease;
 }
@@ -62,6 +70,10 @@ h3 {
   color: white;
   font-size: 1.3rem;
   font-weight: bold;
+}
+
+.logo a{
+  color: #ffffff;
 }
 
 .nav-links {
@@ -75,6 +87,14 @@ h3 {
   text-decoration: none;
   font-weight: bold;
 }
+
+.nav-links a:hover{
+  color: var(--accent-color);
+}
+.nav-links a.active {
+  color: var(--accent-color);
+}
+
 
 .btn {
   display: inline-block;
@@ -130,7 +150,7 @@ h3 {
 }
 
 .hero {
-  margin-top: 5rem;
+  margin-top: 10rem;
 }
 
 .hero-container {
@@ -150,46 +170,55 @@ h3 {
 
 /* about section */
 .about-us {
-  position: relative;
-  /* background: url(/images/632d706299d271d8226f3294_shape_02.svg) no-repeat; */
-  background-position: bottom right; /* Position the SVG */
-  background-size: contain; /* Scale the SVG properly */
+padding: 80px 0;
 }
 
-.about-us::after {
+/* .about-us::after {
   content: "";
   position: absolute;
   bottom: 0px;
   right: 0;
-  /* width: 300px; 
-  height: 300px;  */
+  width: 300px; 
+  height: 300px; 
   background: rgba(255, 255, 255, 0.877);
   z-index: 1;
   pointer-events: none;
-}
+} */
 
 .about-container {
   display: flex;
   justify-content: space-between;
-  padding-top: 150px;
+  align-items: center;
+  /* padding-top: 150px;
   padding-bottom: 150px;
-  position: relative; /* Enables pseudo-element positioning */
+  position: relative; */
 }
 
 .about-content {
-  padding: 10px 140px 10px 0;
+  flex: 1;
+  /* margin-right: 70px; */
+  padding: 10px 100px 10px 0;
+}
+.about-content h2{
+  color: var(--primary-color);
 }
 
+.about-content p {
+  color: #1a1a1a;
+}
+
+
 .about-img {
-  max-width: 500px;
+  flex: 1;
+  max-width: 50%;
   height: auto;
-  margin: 0 auto;
+  /* margin: 0 auto; */
   border-radius: 20px;
   overflow: hidden;
 }
 
 .about-img img {
-  width: 100%;
+  max-width: 100%;
   height: auto;
   display: block;
 }
@@ -419,10 +448,13 @@ h3 {
     flex-direction: column; /* Stack elements vertically */
     align-items: center;    /* Center horizontally */
     text-align: center;     /* Center text */
-    padding-top: 100px;
+    padding-top: 90px;
 
   }
 
+  .hero {
+    margin-top: 2rem;
+  }
 
   .hero h1 {
     font-size: 2.5rem;  /* Reduce heading size */
@@ -435,6 +467,8 @@ h3 {
 
   .hero-buttons {
       flex-direction: column; /* Stack buttons vertically */
+      gap: 10px;
+
       align-items: center;    /* Center the buttons */
   }
 
@@ -458,15 +492,10 @@ h3 {
     }
     .about-img {
       order:1; /* Place the image above content*/
-      margin: 0 auto 20px;    /* Center the image and add margin below */
+      /* margin: 0 auto 20px;    */
+      max-width: 100%;
     }
-  
-    .about-img img {
-      max-width: 100%; /* Make image responsive */
-      height: auto;    /* Maintain aspect ratio */
-      display: block;
-    }
-  
+
 
 
 
@@ -513,9 +542,9 @@ h3 {
 
 /* Mobile Breakpoint */
 @media (max-width: 320px) {
-  .navbar {
-    margin-top: 10px;
-  }
+  /* .navbar {
+  
+  } */
   .hero {
     margin-top: 25px;
     padding-bottom: 0;
@@ -544,13 +573,3 @@ h3 {
   }
 }
 
-@media (max-width: 450px) {
-  /* .header{
-    height: 100vh;
-  } */
-
-  .hero {
-    margin-top: 100px;
-    padding-bottom: 0;
-  }
-}
