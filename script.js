@@ -41,4 +41,17 @@ window.addEventListener('scroll', () => {
 });
 
 
+// Find the logo element (you might need to adjust the selector if your actual HTML is different)
+const logo = document.querySelector('.logo a');
+
+// Add a click event listener
+logo.addEventListener('click', function(e) {
+    e.preventDefault();  // Prevent default link behavior
+
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'  // For smooth scrolling
+    });
+});
+
 
