@@ -1,4 +1,4 @@
-console.log("JavaScript is connected successfully!");
+
 
 
 //  Menu Scrool to section effect
